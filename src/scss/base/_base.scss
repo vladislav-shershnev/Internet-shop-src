@@ -1,0 +1,129 @@
+// плавный скролл, если есть якорные ссылки
+html {
+	scroll-behavior: smooth;
+}
+body{
+	color: #8d8d8d;
+	font-family: "Quicksand";
+	font-weight: 500;
+	font-size: 16px;
+	// ----------------
+	display: flex;
+	flex-direction: column;
+
+}
+.container{
+  // +30padding
+	width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.top__container {
+  max-width: 1700px;
+  margin: 0 auto;
+	background-position: 50% !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+ padding: 132px 0;
+ text-align: center;
+}
+
+
+// прижать к низу footer
+html, body{
+	height: 100%;
+}
+main{
+	flex-grow: 1;
+}
+// ---------------------
+
+.breadcrumbs{
+	display: inline-flex;
+	justify-content: center;
+	// для иконки место (весь размер иконки от начала до элемента родителя)
+	padding-left: 25px;
+	position: relative;
+	margin-top: 10px;
+	&::before{
+		content: '';
+		position: absolute;
+		background: url(../img-file_import/page/home_icon.svg);
+		// обязательные размеры
+		width: 16px;
+		height: 16px;
+		left: 0;
+		top: 1px;
+	}
+	&__list{
+	display: flex;
+	}
+	
+	&__link {
+		color: #727272;
+	}
+	&__item{
+		padding-right: 40px;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			background: url(../img-file_import/page/arrow_right.svg);
+			// обязательные размеры
+			width: 9px;
+			height: 10px;
+			top: 6px;
+			right: 14px;
+		}
+	}
+	span{
+			color: red;
+	}
+}
+
+// ----------------------------------------
+.pagination {
+  display: flex;
+	justify-content: center;
+	padding: 30px 0;
+}
+
+.pagination__arrows {
+	text-transform: uppercase;
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		width: 5px;
+		height: 10px;
+		top: 6px;
+	}
+}
+.pagination__list {
+	display: flex;
+	padding: 0 35px;
+}
+.pagination__item {
+	padding: 0 15px;
+}
+
+.pagination__link_active{
+	color: $accent-color;
+}
+.pagination__prev{
+padding-left: 15px;
+&::before{
+	background-image: url(../../img-file_import/icon/pagination_left.svg);
+	left: 0;
+}
+}
+.pagination__next{
+padding-right: 15px;
+&::before{
+	background-image: url(../../img-file_import/icon/pagination_right.svg);
+	right: 0;
+}
+}
+// -----------------------------------------------

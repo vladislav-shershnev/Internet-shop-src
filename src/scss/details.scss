@@ -1,0 +1,25 @@
+/* Base */
+@import "./base/reset_YT_webcademy";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/base";
+@import "./base/tittle";
+@import "./base/mixins";
+@import "./base/header";
+@import "./base/footer";
+@import "./base/media";
+
+
+
+
+
+/* Blocks, добавить все файлы в папке с расширением scss */
+@import "./blocks/details/*.scss";
+
+// Media (base)
+// @import "./blocks/home/media";
+
+// убрать скролл
+body{
+  overflow-x: hidden  ;
+}
